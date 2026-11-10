@@ -136,17 +136,18 @@
             font-weight: bold;
         }
 
-        /* Блок видео без рамки и белого фона */
+        /* Уменьшенный блок видео без рамки и белого фона */
         .video-wrapper {
-            margin-top: 20px;
-            margin-bottom: 30px;
+            margin: 20px auto 30px auto;
+            max-width: 400px; /* Сделали блок уже */
             text-align: center;
         }
 
         .video-wrapper .gallery-title {
             color: #ffffff;
             text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
-            margin-bottom: 12px;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
         }
 
         .photos-grid {
@@ -226,7 +227,7 @@
         <!-- Контейнер для динамической галереи -->
         <div id="gallery-container"></div>
 
-        <!-- Блок видео (без рамки и белого фона) -->
+        <!-- Компактный блок видео без рамки и белого фона -->
         <div class="video-wrapper">
             <div class="gallery-title">Любимое видео 🎬</div>
             <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.25);">
