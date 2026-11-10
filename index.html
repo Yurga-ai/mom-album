@@ -122,6 +122,7 @@
             animation: fadeIn 0.4s ease-in-out;
             display: none;
             border: 4px solid #d4af37;
+            margin-bottom: 30px;
         }
 
         .gallery-card.visible {
@@ -186,7 +187,7 @@
 
     <div class="container">
         <h1>Любимая мама 💕</h1>
-        <p class="subtitle">Выберите ячейку, чтобы посмотреть альбом</p>
+        <p class="subtitle">Выберите раздел, чтобы посмотреть альбом</p>
 
         <!-- Блок музыкального плеера -->
         <div style="text-align: center; margin: 15px 0;">
@@ -207,7 +208,10 @@
             <button class="age-btn" onclick="showGallery(3)">МОИ ДРУЗЬЯ</button>
             <button class="age-btn" onclick="showGallery(4)">Я НА ДАЧЕ</button>
             <button class="age-btn" onclick="showGallery(5)">ПИТОМЦЫ</button>
-               <div id="gallery-container">
+        </div>
+
+        <!-- Контейнер для динамической галереи и видео -->
+        <div id="gallery-container">
             <div class="gallery-card visible video-card">
                 <div class="gallery-title">Любимое видео 🎬</div>
                 <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.15);">
@@ -220,7 +224,8 @@
                 </div>
             </div>
         </div>
- 
+
+    </div>
 
     <script>
         function toggleAudio() {
@@ -240,49 +245,49 @@
             0: {
                 title: "Всегда молодая ✨",
                 photos: [
-                    { url: "20220401_141410.jpg", caption: "Первые дни дома" },
-                    { url: "IMG_20261109_205812_018.jpg", caption: "Улыбаемся" }
+                    { url: "20220401_141410.jpg", caption: "Прекрасна" },
+                    { url: "IMG_20261109_205812_018.jpg", caption: "Улыбка" }
                 ]
             },
             1: {
                 title: "Рабочие моменты 💼",
                 photos: [
-                    { url: "IMG_20261109_210822_258.jpg", caption: "Я умею ходить!" },
-                    { url: "IMG_20261109_220543_279.jpg", caption: "Ура, мне годик!" }
+                    { url: "IMG_20261109_210822_258.jpg", caption: "В деле" },
+                    { url: "IMG_20261109_220543_279.jpg", caption: "На работе" }
                 ]
             },
             2: {
                 title: "Семья 💖",
                 photos: [
-                    { url: "IMG_20261109_222535_619.jpg", caption: "Мир прекрасен" },
-                    { url: "IMG_20261109_222541_833.jpg", caption: "Пора в садик!" },
-                    { url: "IMG_20261109_222537_445.jpg", caption: "У меня свои делишки" },
-                    { url: "IMG_20261109_222539_950.jpg", caption: "Полетели!" },
-                    { url: "IMG_20261109_222544_083.jpg", caption: "Дорога домой" }
+                    { url: "IMG_20261109_222535_619.jpg", caption: "Вместе" },
+                    { url: "IMG_20261109_222541_833.jpg", caption: "Родные" },
+                    { url: "IMG_20261109_222537_445.jpg", caption: "Наш день" },
+                    { url: "IMG_20261109_222539_950.jpg", caption: "Праздник" },
+                    { url: "IMG_20261109_222544_083.jpg", caption: "Любимые" }
                 ]
             },
             3: {
                 title: "Мои друзья 👭",
                 photos: [
-                    { url: "IMG_20261109_231018_791.jpg", caption: "Я кривляка" },
-                    { url: "IMG_20261109_231044_393.jpg", caption: "Моё море" },
-                    { url: "IMG_20261109_231232_422.jpg", caption: "Магия" },
-                    { url: "IMG_20261109_231356_013.jpg", caption: "Позирую" }
+                    { url: "IMG_20261109_231018_791.jpg", caption: "С друзьями" },
+                    { url: "IMG_20261109_231044_393.jpg", caption: "Встреча" },
+                    { url: "IMG_20261109_231232_422.jpg", caption: "Прекрасный день" },
+                    { url: "IMG_20261109_231356_013.jpg", caption: "На прогулке" }
                 ]
             },
             4: {
                 title: "Я на даче 🌿",
                 photos: [
-                    { url: "IMG_20261109_231333_329.jpg", caption: "Я принцесса" },
-                    { url: "IMG_20261109_231422_196.jpg", caption: "Пойду-ка в школу" }
+                    { url: "IMG_20261109_231333_329.jpg", caption: "На даче" },
+                    { url: "IMG_20261109_231422_196.jpg", caption: "Цветы и сад" }
                 ]
             },
             5: {
                 title: "Питомцы 🐾",
                 photos: [
-                    { url: "IMG_20261109_231450_125.jpg", caption: "Мне 5!" },
-                    { url: "IMG_20261109_231515_594.jpg", caption: "Хеллоуин" },
-                    { url: "IMG_20261109_231502_111.jpg", caption: "Barbie" }
+                    { url: "IMG_20261109_231450_125.jpg", caption: "Наш любимец" },
+                    { url: "IMG_20261109_231515_594.jpg", caption: "С пушистиком" },
+                    { url: "IMG_20261109_231502_111.jpg", caption: "Милый момент" }
                 ]
             }
         };
