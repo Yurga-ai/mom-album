@@ -130,7 +130,7 @@
 
         /* Уменьшенный блок видео без рамки и белого фона */
         .video-wrapper {
-            margin: 20px auto 30px auto;
+            margin: 10px auto 30px auto;
             max-width: 400px;
             text-align: center;
         }
@@ -138,7 +138,7 @@
         .video-wrapper .gallery-title {
             color: #ffffff;
             text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
-            margin-bottom: 10px;
+            margin-bottom: 4px; /* Уменьшили отступ, чтобы текст поднялся ближе к видео */
             font-size: 1.2rem;
         }
 
@@ -267,4 +267,72 @@
                 photos: [
                     { url: "IMG_20261109_222535_619.jpg", caption: "Вместе" },
                     { url: "IMG_20261109_222541_833.jpg", caption: "Родные" },
-                    { url: "IMG_202
+                    { url: "IMG_20261109_222537_445.jpg", caption: "Наш день" },
+                    { url: "IMG_20261109_222539_950.jpg", caption: "Праздник" },
+                    { url: "IMG_20261109_222544_083.jpg", caption: "Любимые" }
+                ]
+            },
+            3: {
+                title: "Мои друзья 👭",
+                photos: [
+                    { url: "IMG_20261109_231018_791.jpg", caption: "С друзьями" },
+                    { url: "IMG_20261109_231044_393.jpg", caption: "Встреча" },
+                    { url: "IMG_20261109_231232_422.jpg", caption: "Прекрасный день" },
+                    { url: "IMG_20261109_231356_013.jpg", caption: "На прогулке" }
+                ]
+            },
+            4: {
+                title: "Я на даче 🌿",
+                photos: [
+                    { url: "IMG_20261109_231333_329.jpg", caption: "На даче" },
+                    { url: "IMG_20261109_231422_196.jpg", caption: "Цветы и сад" }
+                ]
+            },
+            5: {
+                title: "Питомцы 🐾",
+                photos: [
+                    { url: "IMG_20261109_231450_125.jpg", caption: "Наш любимец" },
+                    { url: "IMG_20261109_231515_594.jpg", caption: "С пушистиком" },
+                    { url: "IMG_20261109_231502_111.jpg", caption: "Милый момент" }
+                ]
+            }
+        };
+
+        function showGallery(categoryIndex) {
+            const buttons = document.querySelectorAll('.age-btn');
+            buttons.forEach((btn, index) => {
+                if(index === categoryIndex) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+
+            const data = photoData[categoryIndex];
+            const container = document.getElementById('gallery-container');
+            
+            let html = `
+                <div class="gallery-card visible">
+                    <div class="gallery-title">${data.title}</div>
+                    <div class="photos-grid">
+            `;
+
+            data.photos.forEach(photo => {
+                html += `
+                    <div class="photo-frame">
+                        <img src="${photo.url}" alt="${photo.caption}">
+                        <div class="photo-caption">${photo.caption}</div>
+                    </div>
+                `;
+            });
+
+            html += `
+                    </div>
+                </div>
+            `;
+
+            container.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
