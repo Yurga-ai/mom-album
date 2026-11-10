@@ -128,18 +128,18 @@
             font-weight: bold;
         }
 
-        /* Уменьшенный блок видео без рамки и белого фона */
+        /* Еще более компактный блок видео */
         .video-wrapper {
-            margin: 10px auto 30px auto;
-            max-width: 400px;
+            margin: 10px auto 20px auto;
+            max-width: 280px; /* Уменьшили ширину с 400px до 280px */
             text-align: center;
         }
 
         .video-wrapper .gallery-title {
             color: #ffffff;
             text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
-            margin-bottom: 4px; /* Уменьшили отступ, чтобы текст поднялся ближе к видео */
-            font-size: 1.2rem;
+            margin-bottom: 4px;
+            font-size: 1.1rem; /* Сделали заголовок аккуратнее */
         }
 
         .photos-grid {
@@ -218,10 +218,10 @@
         <!-- Контейнер для динамической галереи -->
         <div id="gallery-container"></div>
 
-        <!-- Компактный блок видео без рамки и белого фона -->
+        <!-- Уменьшенный компактный блок видео -->
         <div class="video-wrapper">
             <div class="gallery-title">Любимое видео 🎬</div>
-            <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.25);">
+            <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; border-radius: 10px; overflow: hidden; box-shadow: 0 6px 15px rgba(0,0,0,0.25);">
                 <iframe src="https://www.youtube.com/embed/ВАШ_ID_ВИДЕО" 
                         title="YouTube video player" 
                         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
